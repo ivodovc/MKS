@@ -90,12 +90,33 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
+  uint32_t kod = 0b10101001110111011100101010000000;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	  for (uint8_t i = 31; i>0; i--)
+	  {
+		  uint32_t mask = 1 << i;
+		  uint32_t result = kod & mask;
+		  if (result){
+			  LL_GPIO_SetOutputPin(LD2_GPIO_Port, LD2_Pin);
+			  //LL_GPIO_SetOutputPin(LD3_GPIO_Port, LD3_Pin);
+		  }else{
+			  LL_GPIO_ResetOutputPin(LD2_GPIO_Port, LD2_Pin);
+			  //LL_GPIO_ResetOutputPin(LD3_GPIO_Port, LD3_Pin);
+		  }
+		  LL_mDelay(200);
+	  }
+	  LL_GPIO_ResetOutputPin(LD2_GPIO_Port, LD2_Pin);
+	  LL_mDelay(1000);
+
+	  //LL_GPIO_SetOutputPin(LD2_GPIO_Port, LD2_Pin);
+	  //LL_mDelay(200);
+	  //LL_GPIO_ResetOutputPin(LD2_GPIO_Port, LD2_Pin);
+	  //LL_mDelay(200);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

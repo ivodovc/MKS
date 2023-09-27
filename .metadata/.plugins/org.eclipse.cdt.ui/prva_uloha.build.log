@@ -1,10 +1,10 @@
-15:20:08 **** Incremental Build of configuration Debug for project prva_uloha ****
+15:40:49 **** Incremental Build of configuration Debug for project prva_uloha ****
 make -j4 all 
 arm-none-eabi-size   prva_uloha.elf 
    text	   data	    bss	    dec	    hex	filename
-   4752	     12	   1564	   6328	   18b8	prva_uloha.elf
+   2404	     12	   1564	   3980	    f8c	prva_uloha.elf
 Finished building: default.size.stdout
  
 
-15:20:08 Build Finished. 0 errors, 0 warnings. (took 265ms)
+15:40:49 Build Finished. 0 errors, 0 warnings. (took 265ms)
 
