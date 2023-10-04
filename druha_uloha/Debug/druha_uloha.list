@@ -1112,10 +1112,10 @@ void tlacitka(void)
  80006a8:	f7ff ff94 	bl	80005d4 <LL_GPIO_IsInputPinSet>
  80006ac:	0003      	movs	r3, r0
  80006ae:	607b      	str	r3, [r7, #4]
-	if (bit==1){
+	if (bit){
  80006b0:	687b      	ldr	r3, [r7, #4]
- 80006b2:	2b01      	cmp	r3, #1
- 80006b4:	d106      	bne.n	80006c4 <tlacitka+0x34>
+ 80006b2:	2b00      	cmp	r3, #0
+ 80006b4:	d006      	beq.n	80006c4 <tlacitka+0x34>
 		debounce_s1 |= 0x0001;
  80006b6:	4b21      	ldr	r3, [pc, #132]	; (800073c <tlacitka+0xac>)
  80006b8:	881b      	ldrh	r3, [r3, #0]
@@ -1164,10 +1164,10 @@ void tlacitka(void)
  80006f8:	f7ff ff6c 	bl	80005d4 <LL_GPIO_IsInputPinSet>
  80006fc:	0003      	movs	r3, r0
  80006fe:	603b      	str	r3, [r7, #0]
-	if (bit2==1){
+	if (bit2){
  8000700:	683b      	ldr	r3, [r7, #0]
- 8000702:	2b01      	cmp	r3, #1
- 8000704:	d106      	bne.n	8000714 <tlacitka+0x84>
+ 8000702:	2b00      	cmp	r3, #0
+ 8000704:	d006      	beq.n	8000714 <tlacitka+0x84>
 		debounce_s2 |= 0x0001;
  8000706:	4b13      	ldr	r3, [pc, #76]	; (8000754 <tlacitka+0xc4>)
  8000708:	881b      	ldrh	r3, [r3, #0]
@@ -1177,13 +1177,12 @@ void tlacitka(void)
  8000710:	4b10      	ldr	r3, [pc, #64]	; (8000754 <tlacitka+0xc4>)
  8000712:	801a      	strh	r2, [r3, #0]
 	}
-	if (debounce_s2 == 0x7FFF)
+	if (debounce_s2 == 0x7FFF) {
  8000714:	4b0f      	ldr	r3, [pc, #60]	; (8000754 <tlacitka+0xc4>)
  8000716:	881b      	ldrh	r3, [r3, #0]
  8000718:	4a0a      	ldr	r2, [pc, #40]	; (8000744 <tlacitka+0xb4>)
  800071a:	4293      	cmp	r3, r2
  800071c:	d10a      	bne.n	8000734 <tlacitka+0xa4>
-	{
 		off_time = Tick + LED_TIME_SHORT;
  800071e:	4b0a      	ldr	r3, [pc, #40]	; (8000748 <tlacitka+0xb8>)
  8000720:	681b      	ldr	r3, [r3, #0]
@@ -1196,7 +1195,7 @@ void tlacitka(void)
  800072c:	2101      	movs	r1, #1
  800072e:	0018      	movs	r0, r3
  8000730:	f7ff ff62 	bl	80005f8 <LL_GPIO_SetOutputPin>
-	}
+}
 }
  8000734:	46c0      	nop			; (mov r8, r8)
  8000736:	46bd      	mov	sp, r7
@@ -1225,7 +1224,7 @@ void volac_tlacitok(void)
  8000762:	4b0d      	ldr	r3, [pc, #52]	; (8000798 <volac_tlacitok+0x40>)
  8000764:	681b      	ldr	r3, [r3, #0]
  8000766:	429a      	cmp	r2, r3
- 8000768:	d205      	bcs.n	8000776 <volac_tlacitok+0x1e>
+ 8000768:	d210      	bcs.n	800078c <volac_tlacitok+0x34>
 	{
 		tlacitka();
  800076a:	f7ff ff91 	bl	8000690 <tlacitka>
@@ -1234,22 +1233,22 @@ void volac_tlacitok(void)
  8000770:	681a      	ldr	r2, [r3, #0]
  8000772:	4b08      	ldr	r3, [pc, #32]	; (8000794 <volac_tlacitok+0x3c>)
  8000774:	601a      	str	r2, [r3, #0]
-	}
-
-
-	 if (Tick > off_time) {
+		if (Tick > off_time) {
  8000776:	4b08      	ldr	r3, [pc, #32]	; (8000798 <volac_tlacitok+0x40>)
  8000778:	681a      	ldr	r2, [r3, #0]
  800077a:	4b08      	ldr	r3, [pc, #32]	; (800079c <volac_tlacitok+0x44>)
  800077c:	681b      	ldr	r3, [r3, #0]
  800077e:	429a      	cmp	r2, r3
  8000780:	d904      	bls.n	800078c <volac_tlacitok+0x34>
-	 LL_GPIO_ResetOutputPin(LED_2_GPIO_Port, LED_2_Pin);
+			  	 LL_GPIO_ResetOutputPin(LED_2_GPIO_Port, LED_2_Pin);
  8000782:	4b07      	ldr	r3, [pc, #28]	; (80007a0 <volac_tlacitok+0x48>)
  8000784:	2101      	movs	r1, #1
  8000786:	0018      	movs	r0, r3
  8000788:	f7ff ff42 	bl	8000610 <LL_GPIO_ResetOutputPin>
-	 }
+	}
+
+
+
 
 }
  800078c:	46c0      	nop			; (mov r8, r8)
@@ -1710,9 +1709,9 @@ static void MX_GPIO_Init(void)
  8000a0e:	003b      	movs	r3, r7
  8000a10:	2200      	movs	r2, #0
  8000a12:	605a      	str	r2, [r3, #4]
-  GPIO_InitStruct.Pull = LL_GPIO_PULL_NO;
+  GPIO_InitStruct.Pull = LL_GPIO_PULL_UP;
  8000a14:	003b      	movs	r3, r7
- 8000a16:	2200      	movs	r2, #0
+ 8000a16:	2201      	movs	r2, #1
  8000a18:	611a      	str	r2, [r3, #16]
   LL_GPIO_Init(S2_GPIO_Port, &GPIO_InitStruct);
  8000a1a:	003b      	movs	r3, r7
