@@ -1,0 +1,10 @@
+16:50:33 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5432	     16	   1584	   7032	   1b78	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+
+16:50:33 Build Finished. 0 errors, 0 warnings. (took 213ms)
+

@@ -148,3 +148,596 @@ arm-none-eabi-size   prva_uloha.elf
    2404	     12	   1564	   3980	    f8c	prva_uloha.elf
 Finished building: default.size.stdout
  
+15:19:09 **** Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_dma.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_dma.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_dma.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_dma.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_exti.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_exti.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_exti.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_exti.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_gpio.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_pwr.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_rcc.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usart.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usart.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usart.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usart.o"
+arm-none-eabi-gcc "../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_utils.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_utils.d" -MT"Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_utils.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_utils.o"
+arm-none-eabi-gcc -mcpu=cortex-m0 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Core/Startup/startup_stm32f030r8tx.d" -MT"Core/Startup/startup_stm32f030r8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Startup/startup_stm32f030r8tx.o" "../Core/Startup/startup_stm32f030r8tx.s"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+arm-none-eabi-gcc "../Core/Src/syscalls.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/syscalls.d" -MT"Core/Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/syscalls.o"
+arm-none-eabi-gcc "../Core/Src/sysmem.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/sysmem.d" -MT"Core/Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/sysmem.o"
+arm-none-eabi-gcc "../Core/Src/system_stm32f0xx.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/system_stm32f0xx.d" -MT"Core/Src/system_stm32f0xx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/system_stm32f0xx.o"
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5416	     12	   1564	   6992	   1b50	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+15:19:24 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5416	     12	   1564	   6992	   1b50	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+15:24:18 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5416	     12	   1564	   6992	   1b50	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+15:24:38 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5416	     12	   1564	   6992	   1b50	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+15:31:41 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/main.c: In function 'blikac':
+../Core/Src/main.c:62:16: error: unknown type name 'unit32_t'
+   62 |         static unit32_t delay;
+      |                ^~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+15:31:57 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5572	     12	   1572	   7156	   1bf4	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+15:32:00 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5572	     12	   1572	   7156	   1bf4	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+15:35:00 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5572	     12	   1572	   7156	   1bf4	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+15:41:00 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/stm32f0xx_it.c: In function 'EXTI0_1_IRQHandler':
+../Core/Src/stm32f0xx_it.c:156:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  156 |     printf("Called");
+      |     ^~~~~~
+../Core/Src/stm32f0xx_it.c:23:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   22 | #include "stm32f0xx_it.h"
+  +++ |+#include <stdio.h>
+   23 | /* Private includes ----------------------------------------------------------*/
+../Core/Src/stm32f0xx_it.c:156:5: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  156 |     printf("Called");
+      |     ^~~~~~
+../Core/Src/stm32f0xx_it.c:156:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   9644	    104	   1912	  11660	   2d8c	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+15:41:15 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/stm32f0xx_it.c: In function 'EXTI0_1_IRQHandler':
+../Core/Src/stm32f0xx_it.c:156:5: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+  156 |     printf("Called\n");
+      |     ^~~~~~
+../Core/Src/stm32f0xx_it.c:23:1: note: include '<stdio.h>' or provide a declaration of 'printf'
+   22 | #include "stm32f0xx_it.h"
+  +++ |+#include <stdio.h>
+   23 | /* Private includes ----------------------------------------------------------*/
+../Core/Src/stm32f0xx_it.c:156:5: warning: incompatible implicit declaration of built-in function 'printf' [-Wbuiltin-declaration-mismatch]
+  156 |     printf("Called\n");
+      |     ^~~~~~
+../Core/Src/stm32f0xx_it.c:156:5: note: include '<stdio.h>' or provide a declaration of 'printf'
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   8292	    104	   1912	  10308	   2844	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+15:41:18 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8292	    104	   1912	  10308	   2844	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+16:06:57 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32f0xx_it.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f0xx_it.d" -MT"Core/Src/stm32f0xx_it.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/stm32f0xx_it.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:83:31: error: 'LED2_GPIO_Port' undeclared (first use in this function); did you mean 'LED_2_GPIO_Port'?
+   83 |          LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
+      |                               ^~~~~~~~~~~~~~
+      |                               LED_2_GPIO_Port
+../Core/Src/main.c:83:31: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:83:47: error: 'LED2_Pin' undeclared (first use in this function); did you mean 'LED_2_Pin'?
+   83 |          LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
+      |                                               ^~~~~~~~
+      |                                               LED_2_Pin
+../Core/Src/main.c: In function 'volac_tlacitok':
+../Core/Src/main.c:99:41: error: 'LED2_GPIO_Port' undeclared (first use in this function); did you mean 'LED_2_GPIO_Port'?
+   99 |                  LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+      |                                         ^~~~~~~~~~~~~~
+      |                                         LED_2_GPIO_Port
+../Core/Src/main.c:99:57: error: 'LED2_Pin' undeclared (first use in this function); did you mean 'LED_2_Pin'?
+   99 |                  LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+      |                                                         ^~~~~~~~
+      |                                                         LED_2_Pin
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:07:04 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'volac_tlacitok':
+../Core/Src/main.c:99:41: error: 'LED2_GPIO_Port' undeclared (first use in this function); did you mean 'LED_2_GPIO_Port'?
+   99 |                  LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+      |                                         ^~~~~~~~~~~~~~
+      |                                         LED_2_GPIO_Port
+../Core/Src/main.c:99:41: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:99:57: error: 'LED2_Pin' undeclared (first use in this function); did you mean 'LED_2_Pin'?
+   99 |                  LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+      |                                                         ^~~~~~~~
+      |                                                         LED_2_Pin
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:07:05 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'volac_tlacitok':
+../Core/Src/main.c:99:41: error: 'LED2_GPIO_Port' undeclared (first use in this function); did you mean 'LED_2_GPIO_Port'?
+   99 |                  LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+      |                                         ^~~~~~~~~~~~~~
+      |                                         LED_2_GPIO_Port
+../Core/Src/main.c:99:41: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:99:57: error: 'LED2_Pin' undeclared (first use in this function); did you mean 'LED_2_Pin'?
+   99 |                  LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+      |                                                         ^~~~~~~~
+      |                                                         LED_2_Pin
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:07:13 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5324	     12	   1588	   6924	   1b0c	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:07:17 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5324	     12	   1588	   6924	   1b0c	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+16:11:29 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5316	     12	   1588	   6916	   1b04	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:11:37 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5316	     12	   1588	   6916	   1b04	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+16:30:01 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:80:9: error: 'bit' undeclared (first use in this function)
+   80 |         bit = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |         ^~~
+../Core/Src/main.c:80:9: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:30:13 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5296	     16	   1576	   6888	   1ae8	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:31:01 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5296	     16	   1576	   6888	   1ae8	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:31:42 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5296	     16	   1576	   6888	   1ae8	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+16:32:08 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5296	     16	   1576	   6888	   1ae8	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:33:09 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5296	     16	   1576	   6888	   1ae8	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:34:17 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5296	     16	   1576	   6888	   1ae8	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:35:49 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:84:26: warning: operation on 'debounce' may be undefined [-Wsequence-point]
+   84 |                 debounce = debounce |= 0x0001;
+      |                 ~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+At top level:
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5320	     16	   1576	   6912	   1b00	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:36:11 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5312	     16	   1576	   6904	   1af8	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:36:35 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5296	     16	   1576	   6888	   1ae8	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:36:38 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5296	     16	   1576	   6888	   1ae8	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+16:39:08 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5296	     16	   1576	   6888	   1ae8	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:41:21 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5308	     16	   1576	   6900	   1af4	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:44:52 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5308	     16	   1576	   6900	   1af4	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+16:46:54 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:62:10: error: non-static declaration of 'off_time' follows static declaration
+   62 | uint32_t off_time;
+      |          ^~~~~~~~
+../Core/Src/main.c:48:17: note: previous declaration of 'off_time' with type 'uint32_t' {aka 'long unsigned int'}
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:87:38: error: 'LED2_GPIO_Port' undeclared (first use in this function); did you mean 'LED_2_GPIO_Port'?
+   87 |                 LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
+      |                                      ^~~~~~~~~~~~~~
+      |                                      LED_2_GPIO_Port
+../Core/Src/main.c:87:38: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:87:54: error: 'LED2_Pin' undeclared (first use in this function); did you mean 'LED_2_Pin'?
+   87 |                 LL_GPIO_SetOutputPin(LED2_GPIO_Port, LED2_Pin);
+      |                                                      ^~~~~~~~
+      |                                                      LED_2_Pin
+../Core/Src/main.c: In function 'volac_tlacitok':
+../Core/Src/main.c:103:33: error: 'LED2_GPIO_Port' undeclared (first use in this function); did you mean 'LED_2_GPIO_Port'?
+  103 |          LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+      |                                 ^~~~~~~~~~~~~~
+      |                                 LED_2_GPIO_Port
+../Core/Src/main.c:103:49: error: 'LED2_Pin' undeclared (first use in this function); did you mean 'LED_2_Pin'?
+  103 |          LL_GPIO_ResetOutputPin(LED2_GPIO_Port, LED2_Pin);
+      |                                                 ^~~~~~~~
+      |                                                 LED_2_Pin
+At top level:
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:47:16 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:62:10: error: non-static declaration of 'off_time' follows static declaration
+   62 | uint32_t off_time;
+      |          ^~~~~~~~
+../Core/Src/main.c:48:17: note: previous declaration of 'off_time' with type 'uint32_t' {aka 'long unsigned int'}
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:47:23 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c:62:10: error: non-static declaration of 'off_time' follows static declaration
+   62 | uint32_t off_time;
+      |          ^~~~~~~~
+../Core/Src/main.c:48:17: note: previous declaration of 'off_time' with type 'uint32_t' {aka 'long unsigned int'}
+   48 | static uint32_t off_time;
+      |                 ^~~~~~~~
+../Core/Src/main.c:48:17: warning: 'off_time' defined but not used [-Wunused-variable]
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:47:29 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5348	     16	   1584	   6948	   1b24	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:47:35 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5348	     16	   1584	   6948	   1b24	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+16:49:00 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'tlacitka':
+../Core/Src/main.c:94:18: error: redefinition of 'bit'
+   94 |         uint32_t bit = LL_GPIO_IsInputPinSet(S2_GPIO_Port, S2_Pin);
+      |                  ^~~
+../Core/Src/main.c:80:18: note: previous definition of 'bit' with type 'uint32_t' {aka 'long unsigned int'}
+   80 |         uint32_t bit = LL_GPIO_IsInputPinSet(S1_GPIO_Port, S1_Pin);
+      |                  ^~~
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j4 all" terminated with exit code 2. Build might be incomplete.
+16:49:10 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5436	     16	   1584	   7036	   1b7c	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:49:14 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5436	     16	   1584	   7036	   1b7c	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+16:50:30 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m0 -std=gnu11 -g3 -DDEBUG -DSTM32F030x8 -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DHSI_VALUE=8000000 -DLSI_VALUE=40000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=0 -DDATA_CACHE_ENABLE=0 -c -I../Core/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "druha_uloha.elf" @"objects.list"   -mcpu=cortex-m0 -T"C:\Users\xdovic03\Documents\xdovic03\MKS\repository\druha_uloha\STM32F030R8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="druha_uloha.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: druha_uloha.elf
+ 
+arm-none-eabi-size   druha_uloha.elf 
+arm-none-eabi-objdump -h -S  druha_uloha.elf  > "druha_uloha.list"
+   text	   data	    bss	    dec	    hex	filename
+   5432	     16	   1584	   7032	   1b78	druha_uloha.elf
+Finished building: default.size.stdout
+ 
+Finished building: druha_uloha.list
+ 
+16:50:33 **** Incremental Build of configuration Debug for project druha_uloha ****
+make -j4 all 
+arm-none-eabi-size   druha_uloha.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5432	     16	   1584	   7032	   1b78	druha_uloha.elf
+Finished building: default.size.stdout
+ 
