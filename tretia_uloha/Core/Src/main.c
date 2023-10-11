@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "sct.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,7 +93,6 @@ int main(void)
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   sct_init();
-  sct_led(0x7A5C36DE);
   HAL_TIM_Encoder_Start(&htim1, htim1.Channel);
   /* USER CODE END 2 */
 
@@ -102,8 +101,11 @@ int main(void)
   uint16_t val = 0;
   while (1)
   {
+	  //read value from counter (htim1)
 	  val = __HAL_TIM_GET_COUNTER(&htim1);
+	  // set value on LED display
 	  sct_value(val);
+	  // wait 50ms
 	  HAL_Delay(50);
     /* USER CODE END WHILE */
 

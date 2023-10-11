@@ -5,6 +5,7 @@
  *      Author: xdovic03
  */
 #include "main.h"
+#include "sct.h"
 
 // array with translation table
 // first index chooses display (first, second or third)
@@ -52,7 +53,7 @@ static const uint32_t reg_values[3][10] = {
 };
 
 // init procedure for SCT LED driver
-void sct_init(){
+void sct_init(void){
 	sct_led(0);
 	// init NOE (negated output enable) and NLA(negated latch enable) to 0
 	HAL_GPIO_WritePin(SCT_NLA_GPIO_Port, SCT_NLA_Pin, GPIO_PIN_RESET);
@@ -63,9 +64,8 @@ void sct_init(){
 // set shift register in SCT to required value
 // each bit represents one LED
 void sct_led(uint32_t value){
-	uint32_t indicator = 1;
 	for (int i=0; i<32; i++){
-		uint32_t bit = (value >> i & 0b1);
+		uint32_t bit = ((value >> i) & 0b1);
 		// first set correct bit value on SCT_SDI pin
 		HAL_GPIO_WritePin(SCT_SDI_GPIO_Port, SCT_SDI_Pin, bit);
 		// then send 1ms pulse on SCT_CLK
