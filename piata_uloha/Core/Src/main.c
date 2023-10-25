@@ -76,6 +76,7 @@ int _write(int file, char const *buf, int n)
 }
 
 static void uart_process_command(char* data) {
+	const char* error = "Invalid command\n";
 	char *token;
 	token = strtok(data, " ");
 	if (strcasecmp(token, "HELLO") == 0) {
@@ -83,7 +84,7 @@ static void uart_process_command(char* data) {
 	}else if (strcasecmp(token, "LED1") == 0) {
 		 token = strtok(NULL, " ");
 		 if (token==NULL) {
-		 	printf("Invalid command\n");
+		 	printf(error);
 		 	return;
 		 }
 		 if (strcasecmp(token, "ON") == 0){
@@ -91,13 +92,14 @@ static void uart_process_command(char* data) {
 		 } else if (strcasecmp(token, "OFF")== 0){
 			 HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
 		 } else{
-			 printf("Invalid command");
+			 printf(error);
+			 return;
 		 }
 		 printf("OK\n");
 	}else if (strcasecmp(token, "LED2") == 0) {
 		 token = strtok(NULL, " ");
 		 if (token==NULL) {
-			 printf("Invalid command\n");
+			 printf(error);
 			 return;
 		 }
 		 if (strcasecmp(token, "ON") == 0){
@@ -116,7 +118,7 @@ static void uart_process_command(char* data) {
 		// read requested address
 		token = strtok(NULL, " ");
 		if (token==NULL){
-			printf("Invalid address \n");
+			printf(error);
 			return;
 		}
 		uint16_t addr = atoi(token);
@@ -128,14 +130,14 @@ static void uart_process_command(char* data) {
 		// read address to be written to
 		token = strtok(NULL, " ");
 		if (token == NULL) {
-			printf("Invalid address \n");
+			printf(error);
 			return;
 		}
 		uint16_t addr = atoi(token);
 		// read value to be written
 		token = strtok(NULL, " ");
 		if (token == NULL) {
-			printf("Invalid value \n");
+			printf(error);
 			return;
 		}
 		uint8_t value = atoi(token);
@@ -148,13 +150,22 @@ static void uart_process_command(char* data) {
 		uint8_t value;
 		for (uint8_t addr = 0; addr<8; addr++){
 			if (HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr, I2C_MEMADD_SIZE_16BIT, &value, 1, 1000) != HAL_OK){
+				// ked sa nepodari citanie z pamate
+				return;
+			}
+			printf("0x%02X ", value);
+		}
+		printf("\n");
+		for (uint8_t addr = 8; addr<16; addr++){
+			if (HAL_I2C_Mem_Read(&hi2c1, EEPROM_ADDR, addr,
+					I2C_MEMADD_SIZE_16BIT, &value, 1, 1000) != HAL_OK) {
 				return;
 			}
 			printf("0x%02X ", value);
 		}
 		printf("\n");
 	}else {
-		printf("Invalid command\n");
+		printf(error);
 	}
 }
 
