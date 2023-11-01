@@ -1,0 +1,3 @@
+../Core/Src/sct.c:68:6:sct_init	1
+../Core/Src/sct.c:78:6:sct_led	2
+../Core/Src/sct.c:94:6:sct_value	5
