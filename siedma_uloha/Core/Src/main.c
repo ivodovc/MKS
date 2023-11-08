@@ -33,7 +33,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define UART_MSG_SEND_DELAY 1000
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -375,6 +375,7 @@ void StartDefaultTask(void const * argument)
   //int16_t value = 0;
   for(;;)
   {
+	// TEST DEMO DATA SENDING LOOP
 	/*value = 1001;
 	xQueueSend(xVisualQueueHandle, &value, 0);
 	osDelay(500);
@@ -398,23 +399,22 @@ void StartVisualTask(void const * argument)
 {
   /* USER CODE BEGIN StartVisualTask */
   /* Infinite loop */
-  for(;;)
-  {
-	  int16_t msg;
-	  if (xQueueReceive(xVisualQueueHandle, &msg, portMAX_DELAY)) {
-	  	if (msg<(-1000)){
-	  		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
-	  		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
-	  	} else if (msg>1000){
-	  		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
-	  		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
-	  	}else{
-	  		HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
-	  		HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
-	  	}
-	 }
-    osDelay(1);
-  }
+   for (;;) {
+		int16_t msg;
+		if (xQueueReceive(xVisualQueueHandle, &msg, portMAX_DELAY)) {
+			if (msg < (-1000)) {
+				HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);
+				HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
+			} else if (msg > 1000) {
+				HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_SET);
+				HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
+			} else {
+				HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_RESET);
+				HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);
+			}
+		}
+		osDelay(1);
+	}
   /* USER CODE END StartVisualTask */
 }
 
@@ -430,6 +430,10 @@ void StartAcceleroTask(void const * argument)
   /* USER CODE BEGIN StartAcceleroTask */
 	// Check device ID
 	uint8_t whoamI = 0;
+	uint8_t samples;
+	int16_t raw_acceleration[3];
+	uint32_t last_uart_msg_tick=0;
+
 	lis2dw12_device_id_get(&lis2dw12, &whoamI);
 	printf("LIS2DW12_ID %s\n", (whoamI == LIS2DW12_ID) ? "OK" : "FAIL");
 
@@ -439,16 +443,19 @@ void StartAcceleroTask(void const * argument)
 	lis2dw12_block_data_update_set(&lis2dw12, PROPERTY_ENABLE);
 	lis2dw12_fifo_mode_set(&lis2dw12, LIS2DW12_STREAM_MODE); // enable continuous FIFO
 	lis2dw12_data_rate_set(&lis2dw12, LIS2DW12_XL_ODR_25Hz); // enable part from power-down
+
 	/* Infinite loop */
 	for (;;) {
-		uint8_t samples;
-		int16_t raw_acceleration[3];
+
 		lis2dw12_fifo_data_level_get(&lis2dw12, &samples);
 		for (uint8_t i = 0; i < samples; i++) {
 			// Read acceleration data
 			lis2dw12_acceleration_raw_get(&lis2dw12, raw_acceleration);
-			printf("X=%d Y=%d Z=%d\n", raw_acceleration[0], raw_acceleration[1],
-					raw_acceleration[2]);
+			if (xTaskGetTickCount() > last_uart_msg_tick + UART_MSG_SEND_DELAY) {
+				printf("X=%d Y=%d Z=%d\n", raw_acceleration[0], raw_acceleration[1],
+						raw_acceleration[2]);
+				last_uart_msg_tick = xTaskGetTickCount();
+			}
 		}
 		xQueueSend(xVisualQueueHandle, &raw_acceleration[0], 0);
 

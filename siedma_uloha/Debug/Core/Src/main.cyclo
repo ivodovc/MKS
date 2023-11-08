@@ -7,7 +7,7 @@
 ../Core/Src/main.c:283:13:MX_USART2_UART_Init	2
 ../Core/Src/main.c:318:13:MX_GPIO_Init	1
 ../Core/Src/main.c:371:6:StartDefaultTask	1
-../Core/Src/main.c:397:6:StartVisualTask	4
-../Core/Src/main.c:428:6:StartAcceleroTask	3
-../Core/Src/main.c:468:6:HAL_TIM_PeriodElapsedCallback	2
-../Core/Src/main.c:485:6:Error_Handler	1
+../Core/Src/main.c:398:6:StartVisualTask	4
+../Core/Src/main.c:428:6:StartAcceleroTask	4
+../Core/Src/main.c:475:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:492:6:Error_Handler	1
