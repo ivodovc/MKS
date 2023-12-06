@@ -106,14 +106,13 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   uint32_t timer_start = 0;
-  uint8_t timed_out = 0;
   while (1)
   {
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
 	  // check if timer is nout out
-		if (HAL_GetTick() - timer_start > TIMEOUT && c_index != 0) {
+		if (((HAL_GetTick() - timer_start) > TIMEOUT) && (c_index != 0)) {
 			printf("Timed Out \n");
 			c_index = 0;
 		}
