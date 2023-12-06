@@ -58,6 +58,9 @@ static void MX_USART3_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
+static volatile uint8_t draw_face_requested = 0;
+
 void step(int8_t x, int8_t y, uint8_t btn)
 {
 	uint8_t buff[4];
@@ -74,15 +77,15 @@ void circle(uint16_t radius)
     const static float full_circle = 2 * M_PI;
     const static uint8_t no_of_segments = 100;
     float delta_angle = full_circle / no_of_segments;
-    int8_t prev_x = radius * cos(0);
-    int8_t prev_y = radius * sin(0);
+    int8_t prev_x = radius * cosf(0);
+    int8_t prev_y = radius * sinf(0);
     // press the button
     step(0,0,1);
     for (uint8_t i = 1; i <= no_of_segments+1; i++)
     {
     	float angle = delta_angle * i;
-    	int8_t x = radius * cos(angle);
-    	int8_t y = radius * sin(angle);
+    	int8_t x = radius * cosf(angle);
+    	int8_t y = radius * sinf(angle);
     	int8_t delta_x = x - prev_x;
     	int8_t delta_y = y - prev_y;
     	step(delta_x, delta_y, 1);
@@ -101,15 +104,15 @@ void draw_part_circle(uint16_t radius, float part)
     const float full_circle = 2 * M_PI * part;
     const uint8_t no_of_segments = 100;
     float delta_angle = full_circle / no_of_segments;
-    int8_t prev_x = radius * cos(0);
-    int8_t prev_y = radius * sin(0);
+    int8_t prev_x = radius * cosf(0);
+    int8_t prev_y = radius * sinf(0);
     // press the mouse button
     step(0,0,1);
     for (uint8_t i = 1; i <= no_of_segments+1; i++)
     {
     	float angle = delta_angle * i;
-    	int8_t x = radius * cos(angle);
-    	int8_t y = radius * sin(angle);
+    	int8_t x = radius * cosf(angle);
+    	int8_t y = radius * sinf(angle);
     	int8_t delta_x = x - prev_x;
     	int8_t delta_y = y - prev_y;
     	step(delta_x, delta_y, 1);
@@ -148,11 +151,11 @@ void happy_face()
     step(0,0,1);
     step(0, -diameter/7, 1);
     step(0,0,0);
-
+    draw_face_requested = 0;
 }
 
 
-static volatile uint8_t draw_circle_requested = 0;
+
 /* USER CODE END 0 */
 
 /**
@@ -197,9 +200,8 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
 	  // wait till this flag is set by Interrupt from User Button
-	  if (draw_circle_requested)
+	  if (draw_face_requested)
 	  {
-		  draw_circle_requested = 0;
 		  happy_face();
 	  }
   }
@@ -389,7 +391,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
     	}
     	last_button_tick = HAL_GetTick();
     	HAL_GPIO_TogglePin(LD1_GPIO_Port, LD1_Pin); // Toggle The Output (LED) Pin
-    	draw_circle_requested = 1;
+    	draw_face_requested = 1;
     }
 }
 /* USER CODE END 4 */
