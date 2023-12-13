@@ -1,0 +1,9 @@
+../Core/Src/main.c:77:5:main	1
+../Core/Src/main.c:152:6:SystemClock_Config	3
+../Core/Src/main.c:198:13:MX_RNG_Init	2
+../Core/Src/main.c:224:13:MX_USART3_UART_Init	2
+../Core/Src/main.c:257:13:MX_USART6_UART_Init	2
+../Core/Src/main.c:290:13:MX_GPIO_Init	1
+../Core/Src/main.c:365:6:StartDefaultTask	1
+../Core/Src/main.c:393:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:410:6:Error_Handler	1
